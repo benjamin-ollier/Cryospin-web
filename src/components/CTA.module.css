@@ -1,0 +1,107 @@
+.cta {
+    padding: var(--space-4xl) var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaInner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-2xl);
+    border-radius: var(--radius-xl);
+    position: relative;
+    z-index: 1;
+    background: var(--bg-card);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--border-glass);
+    overflow: hidden;
+}
+
+.ctaInner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 100, 255, 0.04),
+            rgba(0, 170, 255, 0.08));
+    z-index: -1;
+}
+
+.ctaInner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--accent-gradient);
+    opacity: 0.5;
+}
+
+.ctaTitle {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-md);
+}
+
+.ctaSubtitle {
+    font-size: 1.05rem;
+    color: var(--chrome-300);
+    max-width: 500px;
+    margin: 0 auto var(--space-2xl);
+    line-height: 1.7;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-full);
+    background: var(--accent-gradient);
+    color: white;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 24px rgba(0, 170, 255, 0.3);
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 40px rgba(0, 170, 255, 0.5);
+}
+
+.ctaInfo {
+    margin-top: var(--space-lg);
+    font-size: 0.8rem;
+    color: var(--chrome-500);
+}
+
+
+.ctaOrb1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 170, 255, 0.1), transparent);
+    filter: blur(60px);
+    top: -100px;
+    right: -100px;
+    z-index: 0;
+}
+
+.ctaOrb2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 140, 255, 0.06), transparent);
+    filter: blur(60px);
+    bottom: -80px;
+    left: -80px;
+    z-index: 0;
+}

@@ -1,0 +1,96 @@
+
+.reveal {
+    will-change: transform, opacity, filter;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-property: transform, opacity, filter, clip-path;
+}
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.scale {
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+.scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.blur {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(20px);
+}
+
+.blur.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+.clip-up {
+    clip-path: inset(100% 0 0 0);
+}
+
+.clip-up.visible {
+    clip-path: inset(0% 0 0 0);
+}
+
+
+.textRevealContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.3em;
+}
+
+.wordWrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.word {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.wordVisible {
+    transform: translateY(0);
+}
