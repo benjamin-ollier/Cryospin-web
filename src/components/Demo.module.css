@@ -87,13 +87,13 @@
     gap: var(--space-sm);
     padding: 1rem 2.5rem;
     border-radius: var(--radius-full);
-    background: var(--accent-gradient);
-    color: white;
+    background: #ffffff;
+    color: #050509;
     font-weight: 700;
     font-size: 1.05rem;
     letter-spacing: 0.02em;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 24px rgba(27, 30, 228, 0.4);
+    box-shadow: 0 4px 24px rgba(160, 160, 170, 0.45);
     position: relative;
     overflow: hidden;
     text-decoration: none;
@@ -103,7 +103,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(135deg, rgba(120, 120, 130, 0.18), transparent);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -113,7 +113,7 @@
 }
 
 .downloadBtn:hover {
-    box-shadow: 0 8px 32px rgba(27, 30, 228, 0.6);
+    box-shadow: 0 8px 32px rgba(180, 180, 190, 0.72);
     transform: translateY(-2px);
 }
 
