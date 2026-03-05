@@ -162,6 +162,19 @@
     gap: 0.25em;
 }
 
+.titleVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titleImage {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .titleLine {
     font-size: clamp(2.2rem, 5vw, 4rem);
     font-weight: 900;

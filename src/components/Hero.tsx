@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
-import { TextReveal } from "./ScrollReveal";
 import { useMagneticHover } from "@/hooks/useAnimations";
 
 export default function Hero() {
@@ -46,17 +46,13 @@ export default function Hero() {
 
             <div className={styles.heroContent}>
                 <div className={`${styles.titleBlock} ${loaded ? styles.titleVisible : ""}`}>
-                    <TextReveal
-                        text="PALMYRE FLANELLE"
-                        as="h1"
-                        className={styles.titleLine}
-                        staggerDelay={80}
-                    />
-                    <TextReveal
-                        text="en toute situation."
-                        as="h1"
-                        className={`${styles.titleLine} ${styles.titleAccent}`}
-                        staggerDelay={80}
+                    <Image
+                        src="/palmyre_flanelle.png"
+                        alt="Palmyre Flanelle"
+                        width={1502}
+                        height={750}
+                        className={styles.titleImage}
+                        priority
                     />
                 </div>
 
