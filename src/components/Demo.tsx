@@ -9,11 +9,11 @@ export default function Demo() {
         <section className={styles.demo} id="demo">
             <div className={styles.demoHeader}>
                 <ScrollReveal variant="fade-up">
-                    <span className={styles.sectionLabel}>L'application</span>
+                    <span className={styles.sectionLabel}></span>
                 </ScrollReveal>
 
                 <TextReveal
-                    text="Découvrez l'interface Cryospin"
+                    text="Discover the Cryospin interface"
                     as="h2"
                     className={styles.sectionTitle}
                     staggerDelay={70}
@@ -21,7 +21,7 @@ export default function Demo() {
 
                 <ScrollReveal variant="blur" delay={200}>
                     <p className={styles.sectionSubtitle}>
-                        Toutes vos données de température, vos historiques et vos réglages au creux de votre main.
+                        All your temperature data, history, and settings in the palm of your hand.
                     </p>
                 </ScrollReveal>
             </div>
@@ -31,7 +31,7 @@ export default function Demo() {
                     <div className={styles.phoneGlowContainer}>
                         <Image
                             src="/app-screenshot.png"
-                            alt="Screenshot de l'application Cryospin"
+                            alt="Cryospin app screenshot"
                             width={320}
                             height={650}
                             className={styles.appScreenshot}
@@ -48,7 +48,7 @@ export default function Demo() {
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Télécharger l'application
+                        Download the app
                     </a>
                 </div>
             </ScrollReveal>
