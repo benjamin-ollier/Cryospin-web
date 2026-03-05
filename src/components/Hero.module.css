@@ -229,13 +229,13 @@
     gap: var(--space-xs);
     padding: 0.9rem 2rem;
     border-radius: var(--radius-full);
-    background: var(--accent-gradient);
-    color: white;
+    background: #ffffff;
+    color: #050509;
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.01em;
     transition: box-shadow 0.3s ease, background 0.3s ease;
-    box-shadow: 0 4px 24px rgba(27, 30, 228, 0.3);
+    box-shadow: 0 4px 20px rgba(160, 160, 170, 0.45);
     position: relative;
     overflow: hidden;
 }
@@ -244,7 +244,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent);
+    background: linear-gradient(135deg, rgba(120, 120, 130, 0.18), transparent);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -254,7 +254,7 @@
 }
 
 .primaryBtn:hover {
-    box-shadow: 0 8px 32px rgba(27, 30, 228, 0.5);
+    box-shadow: 0 8px 28px rgba(180, 180, 190, 0.75);
 }
 
 .btnArrow {
