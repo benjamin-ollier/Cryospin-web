@@ -155,6 +155,23 @@
 
 .titleBlock {
     margin-bottom: var(--space-lg);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.titleVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titleImage {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .titleLine {
