@@ -55,30 +55,34 @@
 .navLink {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--chrome-300);
-    transition: color var(--transition-fast);
+    color: white;
+    text-shadow: none;
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
     letter-spacing: 0.02em;
 }
 
 .navLink:hover {
-    color: var(--chrome-100);
+    color: white;
+    text-shadow:
+        0 0 12px rgba(200, 200, 210, 0.95),
+        0 0 28px rgba(170, 170, 180, 0.9);
 }
 
 .ctaButton {
     padding: 0.6rem 1.4rem;
     border-radius: var(--radius-full);
-    background: var(--accent-blue);
-    color: white;
+    background: #ffffff;
+    color: #050509;
     font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 0.02em;
     transition: all var(--transition-fast);
-    box-shadow: 0 4px 16px rgba(27, 30, 228, 0.35);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
 }
 
 .ctaButton:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 24px rgba(27, 30, 228, 0.55);
+    box-shadow: 0 6px 24px rgba(255, 255, 255, 0.45);
 }
 
 @media (max-width: 768px) {
