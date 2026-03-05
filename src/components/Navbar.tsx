@@ -19,17 +19,17 @@ export default function Navbar() {
                 <ul className={styles.navLinks}>
                     <li>
                         <a href="#features" className={styles.navLink}>
-                            Fonctionnalités
+                            Features
                         </a>
                     </li>
                     <li>
                         <a href="#demo" className={styles.navLink}>
-                            Démo
+                            Demonstration
                         </a>
                     </li>
                     <li>
                         <a href="https://seasonly.fr/collections/shop" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
-                            Boutique
+                            Shop
                         </a>
                     </li>
                     <li>
@@ -39,7 +39,7 @@ export default function Navbar() {
                     </li>
                 </ul>
                 <a href="#contact" className={styles.ctaButton}>
-                    Pré-commander
+                    Pre-order
                 </a>
             </div>
         </nav>
