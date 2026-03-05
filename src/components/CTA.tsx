@@ -15,15 +15,15 @@ export default function CTA() {
             <ScrollReveal variant="scale" duration={1200}>
                 <div className={styles.ctaInner}>
                     <TextReveal
-                        text="Prêt à rester au frais ?"
+                        text="No reason to stop !"
                         as="h2"
                         className={styles.ctaTitle}
                         staggerDelay={80}
                     />
                     <ScrollReveal variant="blur" delay={300}>
                         <p className={styles.ctaSubtitle}>
-                            Rejoignez les premiers utilisateurs du Cryospin. Pré-commandez dès
-                            maintenant et profitez d&apos;un tarif de lancement exclusif.
+                            Join the first Cryospin users. Pre-order now and get
+                            an exclusive launch price.
                         </p>
                     </ScrollReveal>
                     <ScrollReveal variant="fade-up" delay={500}>
@@ -32,13 +32,13 @@ export default function CTA() {
                             className={styles.ctaButton}
                             ref={magneticRef as React.Ref<HTMLAnchorElement>}
                         >
-                            Pré-commander maintenant
+                            Pre-order now
                             <span>→</span>
                         </a>
                     </ScrollReveal>
                     <ScrollReveal variant="fade-up" delay={600}>
                         <p className={styles.ctaInfo}>
-                            Aucun engagement — annulation gratuite à tout moment.
+                            No commitment — free cancellation at any time.
                         </p>
                     </ScrollReveal>
                 </div>
