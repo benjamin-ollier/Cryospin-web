@@ -57,8 +57,8 @@ export default function Hero() {
                 </div>
 
                 <p className={`${styles.subtitle} ${loaded ? styles.subtitleVisible : ""}`}>
-                    Cryospin est un collier de refroidissement connecté, piloté par application.
-                    Mode automatique ou contrôle manuel — la température idéale, toujours.
+                    Cryospin is a connected cooling necklace controlled through an app.
+                    Automatic mode or manual control — the ideal temperature, always.
                 </p>
 
                 <div className={`${styles.heroCtas} ${loaded ? styles.ctasVisible : ""}`}>
@@ -67,7 +67,7 @@ export default function Hero() {
                         className={styles.primaryBtn}
                         ref={magneticRef1 as React.Ref<HTMLAnchorElement>}
                     >
-                        <span>Voir la démo</span>
+                        <span>Watch the demonstration</span>
                         <span className={styles.btnArrow}>→</span>
                     </a>
                     <a
@@ -75,7 +75,7 @@ export default function Hero() {
                         className={styles.secondaryBtn}
                         ref={magneticRef2 as React.Ref<HTMLAnchorElement>}
                     >
-                        Découvrir le produit
+                        Discover the product
                     </a>
                 </div>
 
