@@ -44,7 +44,7 @@
 
 .footerLink {
     font-size: 0.85rem;
-    color: var(--chrome-400);
+    color: var(--chrome-200);
     transition: color var(--transition-fast);
 }
 
@@ -54,7 +54,7 @@
 
 .footerCopy {
     font-size: 0.8rem;
-    color: var(--chrome-500);
+    color: var(--chrome-400);
     width: 100%;
     text-align: center;
     margin-top: var(--space-lg);

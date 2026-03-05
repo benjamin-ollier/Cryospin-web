@@ -56,22 +56,19 @@ export default function Product() {
                             <div className={styles.featureList}>
                                 <div className={styles.featureItem}>
                                     <div className={styles.featureHeader}>
-                                        <span className={styles.featureIcon}>🌡️</span>
                                         <h3>Capteur de température</h3>
                                     </div>
                                     <p>Mesure en continu à la surface du cou pour un déclenchement précis et automatique.</p>
                                 </div>
                                 <div className={styles.featureItem}>
                                     <div className={styles.featureHeader}>
-                                        <span className={styles.featureIcon}>💨</span>
                                         <h3>Ventilation ajustable</h3>
                                     </div>
                                     <p>Puissance réglable de 0 à 100%, silencieux et efficace même à haute intensité.</p>
                                 </div>
                                 <div className={styles.featureItem}>
                                     <div className={styles.featureHeader}>
-                                        <span className={styles.featureIcon}>📱</span>
-                                        <h3>App Bluetooth / WiFi</h3>
+                                        <h3>App WiFi</h3>
                                     </div>
                                     <p>Contrôle via ESP32. Pilotez-le depuis votre smartphone en temps réel.</p>
                                 </div>

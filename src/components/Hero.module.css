@@ -155,10 +155,15 @@
 
 .titleBlock {
     margin-bottom: var(--space-lg);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25em;
 }
 
 .titleLine {
-    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-size: clamp(2.2rem, 5vw, 4rem);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -174,7 +179,7 @@
 
 .subtitle {
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--chrome-300);
+    color: var(--chrome-100);
     max-width: 560px;
     margin: 0 auto var(--space-2xl);
     line-height: 1.7;
@@ -294,11 +299,21 @@
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    border: 6px solid var(--chrome-600);
-    border-top-color: var(--accent-red);
-    border-right-color: var(--accent-blue);
     clip-path: inset(0 0 50% 0);
     position: relative;
+}
+
+.gaugeRing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(to right, #002EB5, #8A2BE2);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
 }
 
 .gaugeTemp {
@@ -333,11 +348,11 @@
 }
 
 .gaugeLabelFin {
-    color: var(--accent-blue);
+    color: #002EB5;
 }
 
 .gaugeLabelDebut {
-    color: var(--accent-red);
+    color: #8A2BE2;
 }
 
 

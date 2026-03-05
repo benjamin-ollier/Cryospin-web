@@ -80,6 +80,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  color: var(--chrome-200);
+}
+
 a {
   color: inherit;
   text-decoration: none;

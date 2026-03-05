@@ -40,14 +40,14 @@ export default function Hero() {
                 <div className={`${styles.orb} ${styles.orb1}`} />
                 <div className={`${styles.orb} ${styles.orb2}`} />
                 <div className={`${styles.orb} ${styles.orb3}`} />
-                
+
                 <div ref={cursorGlowRef} className={styles.cursorGlow} />
             </div>
 
             <div className={styles.heroContent}>
                 <div className={`${styles.titleBlock} ${loaded ? styles.titleVisible : ""}`}>
                     <TextReveal
-                        text="Restez au frais,"
+                        text="PALMYRE FLANELLE"
                         as="h1"
                         className={styles.titleLine}
                         staggerDelay={80}
@@ -83,7 +83,7 @@ export default function Hero() {
                     </a>
                 </div>
 
-                
+
                 <div className={`${styles.gaugeWrapper} ${loaded ? styles.gaugeVisible : ""}`}>
                     <div className={styles.gauge}>
                         <div className={styles.gaugeRing} />
@@ -102,7 +102,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            
+
             <div className={`${styles.scrollIndicator} ${loaded ? styles.scrollVisible : ""}`}>
                 <div className={styles.scrollLine} />
             </div>

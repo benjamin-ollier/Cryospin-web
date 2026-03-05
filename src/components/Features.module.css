@@ -23,11 +23,12 @@
     font-weight: 800;
     letter-spacing: -0.02em;
     margin-bottom: var(--space-md);
+    text-align: center;
 }
 
 .sectionSubtitle {
     font-size: 1.05rem;
-    color: var(--chrome-300);
+    color: var(--chrome-100);
     max-width: 520px;
     margin: 0 auto;
 }
@@ -88,7 +89,7 @@
 }
 
 .cardDesc {
-    color: var(--chrome-300);
+    color: var(--chrome-200);
     font-size: 0.95rem;
     line-height: 1.65;
     margin-bottom: var(--space-lg);
@@ -120,21 +121,6 @@
     flex-shrink: 0;
 }
 
-.dotBlue {
-    background: var(--accent-blue);
-    box-shadow: 0 0 6px var(--accent-blue);
-}
-
-.dotRed {
-    background: var(--accent-red);
-    box-shadow: 0 0 6px var(--accent-red);
-}
-
-.dotCyan {
-    background: var(--accent-cyan);
-    box-shadow: 0 0 6px var(--accent-cyan);
-}
-
 
 .secondaryCards {
     display: grid;
@@ -163,7 +149,7 @@
 
 .secondaryDesc {
     font-size: 0.85rem;
-    color: var(--chrome-400);
+    color: var(--chrome-200);
     line-height: 1.5;
 }
 

@@ -60,6 +60,9 @@ export default function ProductDetail() {
                         text="Le collier Cryospin n'est pas un gadget — c'est un outil de confort conçu pour ceux qui refusent de subir la chaleur. Simple. Précis. Discret."
                         className={styles.bodySecond}
                     />
+                </div>
+
+                <div className={styles.specFooter}>
                     <div className={styles.specRow}>
                         <div className={styles.spec}>
                             <span className={styles.specValue}>36–42</span>

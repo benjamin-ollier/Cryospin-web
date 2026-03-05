@@ -169,7 +169,7 @@
 
 .featureItem p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--chrome-200);
     line-height: 1.6;
 }
 

@@ -30,14 +30,6 @@ export default function Features() {
 
                 <ScrollReveal variant="fade-up" delay={100} duration={1000} className={styles.cardWrapper}>
                     <div className={`glass-card ${styles.card}`}>
-                        <div className={`${styles.cardIcon} ${styles.iconBlue}`}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="12" y1="2" x2="12" y2="22"></line>
-                                <line x1="17" y1="5" x2="7" y2="19"></line>
-                                <line x1="22" y1="12" x2="2" y2="12"></line>
-                                <line x1="19" y1="19" x2="5" y2="5"></line>
-                            </svg>
-                        </div>
                         <h3 className={styles.cardTitle}>Mode Automatique</h3>
                         <p className={styles.cardDesc}>
                             Programmez les seuils de température et laissez Cryospin gérer le
@@ -46,15 +38,12 @@ export default function Features() {
                         </p>
                         <ul className={styles.paramList}>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotRed}`} />
                                 Température de début — seuil de déclenchement
                             </li>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotBlue}`} />
                                 Température de fin — seuil d&apos;arrêt
                             </li>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotCyan}`} />
                                 Puissance du ventilateur ajustable
                             </li>
                         </ul>
@@ -64,19 +53,6 @@ export default function Features() {
 
                 <ScrollReveal variant="fade-up" delay={250} duration={1000} className={styles.cardWrapper}>
                     <div className={`glass-card ${styles.card}`}>
-                        <div className={`${styles.cardIcon} ${styles.iconRed}`}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="4" y1="21" x2="4" y2="14"></line>
-                                <line x1="4" y1="10" x2="4" y2="3"></line>
-                                <line x1="12" y1="21" x2="12" y2="12"></line>
-                                <line x1="12" y1="8" x2="12" y2="3"></line>
-                                <line x1="20" y1="21" x2="20" y2="16"></line>
-                                <line x1="20" y1="12" x2="20" y2="3"></line>
-                                <line x1="1" y1="14" x2="7" y2="14"></line>
-                                <line x1="9" y1="8" x2="15" y2="8"></line>
-                                <line x1="17" y1="16" x2="23" y2="16"></line>
-                            </svg>
-                        </div>
                         <h3 className={styles.cardTitle}>Mode Manuel</h3>
                         <p className={styles.cardDesc}>
                             Prenez le contrôle total avec un simple bouton on/off et un curseur
@@ -85,15 +61,12 @@ export default function Features() {
                         </p>
                         <ul className={styles.paramList}>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotRed}`} />
                                 Bouton ON / OFF instantané
                             </li>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotBlue}`} />
                                 Réglage de la puissance en temps réel
                             </li>
                             <li className={styles.param}>
-                                <span className={`${styles.paramDot} ${styles.dotCyan}`} />
                                 Durée de fonctionnement optionnelle
                             </li>
                         </ul>
