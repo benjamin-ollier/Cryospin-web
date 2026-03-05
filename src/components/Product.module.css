@@ -131,7 +131,6 @@
 .featureCard {
     background: #eaeaef;
     color: #111;
-    padding: var(--space-3xl);
     display: flex;
     flex-direction: column;
 }
@@ -142,6 +141,7 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--space-xl);
+    padding: var(--space-3xl);
 }
 
 .featureItem {

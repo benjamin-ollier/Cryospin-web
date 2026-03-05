@@ -28,6 +28,11 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
+                        <a href="https://seasonly.fr/collections/shop" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+                            Boutique
+                        </a>
+                    </li>
+                    <li>
                         <a href="#contact" className={styles.navLink}>
                             Contact
                         </a>
