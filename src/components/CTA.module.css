@@ -49,7 +49,7 @@
 
 .ctaSubtitle {
     font-size: 1.05rem;
-    color: var(--chrome-100);
+    color:  white;
     max-width: 500px;
     margin: 0 auto var(--space-2xl);
     line-height: 1.7;
@@ -78,7 +78,7 @@
 .ctaInfo {
     margin-top: var(--space-lg);
     font-size: 0.8rem;
-    color: var(--chrome-400);
+    color: white;
 }
 
 
