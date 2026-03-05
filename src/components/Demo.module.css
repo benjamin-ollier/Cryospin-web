@@ -96,9 +96,9 @@
 }
 
 .tabActive {
-    background: linear-gradient(135deg, rgba(0, 180, 255, 0.3), rgba(0, 180, 255, 0.15));
+    background: linear-gradient(135deg, rgba(27, 30, 228, 0.3), rgba(27, 30, 228, 0.15));
     color: white;
-    box-shadow: 0 2px 12px rgba(0, 180, 255, 0.2);
+    box-shadow: 0 2px 12px rgba(27, 30, 228, 0.2);
 }
 
 
@@ -300,9 +300,9 @@
 
 .powerButtonOn {
     border-color: var(--accent-blue);
-    background: rgba(0, 180, 255, 0.1);
+    background: rgba(27, 30, 228, 0.1);
     color: var(--accent-blue);
-    box-shadow: 0 0 30px var(--accent-blue-glow), 0 0 60px rgba(0, 180, 255, 0.1);
+    box-shadow: 0 0 30px var(--accent-blue-glow), 0 0 60px rgba(27, 30, 228, 0.1);
 }
 
 .powerLabel {

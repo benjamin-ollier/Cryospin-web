@@ -25,7 +25,7 @@
     inset: 0;
     background: linear-gradient(135deg,
             rgba(0, 100, 255, 0.04),
-            rgba(0, 170, 255, 0.08));
+            rgba(27, 30, 228, 0.08));
     z-index: -1;
 }
 
@@ -41,9 +41,9 @@
 }
 
 .ctaTitle {
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     margin-bottom: var(--space-md);
 }
 
@@ -61,18 +61,18 @@
     gap: var(--space-sm);
     padding: 1rem 2.5rem;
     border-radius: var(--radius-full);
-    background: var(--accent-gradient);
+    background: var(--accent-blue);
     color: white;
     font-weight: 700;
     font-size: 1.05rem;
     transition: all var(--transition-fast);
-    box-shadow: 0 4px 24px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 4px 24px rgba(27, 30, 228, 0.3);
     animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .ctaButton:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 40px rgba(0, 170, 255, 0.5);
+    box-shadow: 0 8px 40px rgba(27, 30, 228, 0.5);
 }
 
 .ctaInfo {
@@ -87,7 +87,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 170, 255, 0.1), transparent);
+    background: radial-gradient(circle, rgba(27, 30, 228, 0.1), transparent);
     filter: blur(60px);
     top: -100px;
     right: -100px;

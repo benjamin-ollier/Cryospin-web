@@ -39,12 +39,22 @@
     gap: var(--space-xl);
     max-width: 1000px;
     margin: 0 auto var(--space-2xl);
+    align-items: stretch;
+}
+
+.cardWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
     padding: var(--space-2xl);
     position: relative;
     overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .cardIcon {
@@ -59,14 +69,14 @@
 }
 
 .iconBlue {
-    background: rgba(0, 180, 255, 0.12);
-    color: var(--accent-blue);
-    box-shadow: 0 0 24px rgba(0, 180, 255, 0.1);
+    background: rgba(27, 30, 228, 0.12);
+    color: white;
+    box-shadow: 0 0 24px rgba(27, 30, 228, 0.1);
 }
 
 .iconRed {
     background: rgba(255, 64, 96, 0.12);
-    color: var(--accent-red);
+    color: white;
     box-shadow: 0 0 24px rgba(255, 64, 96, 0.1);
 }
 

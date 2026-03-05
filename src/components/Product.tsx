@@ -1,40 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import dynamic from "next/dynamic";
 import styles from "./Product.module.css";
 import ScrollReveal, { TextReveal } from "./ScrollReveal";
 
+const ProductViewer3D = dynamic(() => import("./ProductViewer3D"), { ssr: false });
+
 export default function Product() {
-    const [imageTransform, setImageTransform] = useState(
-        "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
-    );
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -12;
-        const rotateY = ((x - centerX) / centerX) * 12;
-
-        setImageTransform(
-            `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`
-        );
-    };
-
-    const handleMouseLeave = () => {
-        setImageTransform(
-            "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
-        );
-    };
 
     return (
         <section className={styles.descriptionSection} id="product">
             <div className={styles.container}>
-                
+
                 <div className={styles.textGrid}>
                     <div className={styles.labelCol}>
                         <ScrollReveal variant="fade-up">
@@ -58,24 +35,12 @@ export default function Product() {
                     </div>
                 </div>
 
-                
+
                 <div className={styles.imageGrid}>
                     <ScrollReveal variant="fade-up" delay={200} duration={1200}>
                         <div className={styles.imageCard}>
-                            <div
-                                className={styles.imageWrapper}
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <video
-                                    src="/3dvideo.mp4"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className={styles.productImg}
-                                    style={{ transform: imageTransform }}
-                                />
+                            <div className={styles.imageWrapper}>
+                                <ProductViewer3D />
                             </div>
                             <div className={styles.cardFooter}>
                                 <span className={styles.cardNum}>01</span>

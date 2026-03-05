@@ -166,7 +166,7 @@
     width: 3px;
     height: 12px;
     border-radius: 2px;
-    background: rgba(0, 170, 255, 0.7);
+    background: rgba(27, 30, 228, 0.7);
     position: absolute;
     left: -1px;
     animation: scrollBounce 2s ease-in-out infinite;
