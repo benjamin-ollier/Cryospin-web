@@ -53,11 +53,11 @@ export default function ProductDetail() {
             <div className={styles.splitRight} ref={rightRef}>
                 <div ref={textRef} className={styles.textContent}>
                     <TextScrollReveal
-                        text="Le design du Cryospin s'inspire d'une logique d'épure totale — chaque courbe, chaque matière a été sélectionnée pour disparaître sur le cou tout en assurant une diffusion thermique maximale. La palette de couleurs est dérivée directement de l'identité du produit : ton sur ton pour maintenir une expression calme, propre et raffinée."
+                        text="Cryospin's design follows a philosophy of total minimalism — every curve and every material was selected to sit seamlessly on the neck while ensuring maximum thermal diffusion. The color palette is derived directly from the product's identity: tone-on-tone to maintain a calm, clean, and refined expression."
                         className={styles.body}
                     />
                     <TextScrollReveal
-                        text="Le collier Cryospin n'est pas un gadget — c'est un outil de confort conçu pour ceux qui refusent de subir la chaleur. Simple. Précis. Discret."
+                        text="The Cryospin necklace is not a gadget — it is a comfort tool designed for people who refuse to endure the heat. Simple. Precise. Discreet."
                         className={styles.bodySecond}
                     />
                 </div>
@@ -66,15 +66,15 @@ export default function ProductDetail() {
                     <div className={styles.specRow}>
                         <div className={styles.spec}>
                             <span className={styles.specValue}>36–42</span>
-                            <span className={styles.specLabel}>cm — taille universelle</span>
+                            <span className={styles.specLabel}>cm — universal fit</span>
                         </div>
                         <div className={styles.spec}>
                             <span className={styles.specValue}>180g</span>
-                            <span className={styles.specLabel}>ultra léger</span>
+                            <span className={styles.specLabel}>ultra-light</span>
                         </div>
                         <div className={styles.spec}>
                             <span className={styles.specValue}>8h</span>
-                            <span className={styles.specLabel}>d&apos;autonomie</span>
+                            <span className={styles.specLabel}>battery life</span>
                         </div>
                     </div>
                 </div>
