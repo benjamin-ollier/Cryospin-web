@@ -8,12 +8,12 @@ export default function Footer() {
                 <ul className={styles.footerLinks}>
                     <li>
                         <a href="#features" className={styles.footerLink}>
-                            Fonctionnalités
+                            Features
                         </a>
                     </li>
                     <li>
                         <a href="#demo" className={styles.footerLink}>
-                            Démo
+                            Demonstration
                         </a>
                     </li>
                     <li>
@@ -23,7 +23,7 @@ export default function Footer() {
                     </li>
                 </ul>
                 <p className={styles.footerCopy}>
-                    © {new Date().getFullYear()} Cryospin. Tous droits réservés.
+                    © {new Date().getFullYear()} Cryospin. All Rights Reserved.
                 </p>
             </div>
         </footer>
