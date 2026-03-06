@@ -161,7 +161,7 @@
 
 .productGaugeTemp {
     position: absolute;
-    bottom: 0;
+    bottom: 1.1rem;
     left: 50%;
     transform: translateX(-50%);
     font-size: 3rem;
@@ -177,9 +177,12 @@
 }
 
 .productGaugeLabels {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.1rem;
     display: flex;
     justify-content: space-between;
-    margin-top: var(--space-xs);
     padding: 0 var(--space-lg);
 }
 
