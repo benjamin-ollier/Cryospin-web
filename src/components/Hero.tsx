@@ -3,12 +3,9 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
-import { useMagneticHover } from "@/hooks/useAnimations";
 
 export default function Hero() {
     const [loaded, setLoaded] = useState(false);
-    const magneticRef1 = useMagneticHover(0.25);
-    const magneticRef2 = useMagneticHover(0.2);
     const cursorGlowRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -54,47 +51,6 @@ export default function Hero() {
                         className={styles.titleImage}
                         priority
                     />
-                </div>
-
-                <p className={`${styles.subtitle} ${loaded ? styles.subtitleVisible : ""}`}>
-                    Cryospin is a connected cooling necklace controlled through an app.
-                    Automatic mode or manual control — the ideal temperature, always.
-                </p>
-
-                <div className={`${styles.heroCtas} ${loaded ? styles.ctasVisible : ""}`}>
-                    <a
-                        href="#demo"
-                        className={styles.primaryBtn}
-                        ref={magneticRef1 as React.Ref<HTMLAnchorElement>}
-                    >
-                        <span>Watch the demonstration</span>
-                        <span className={styles.btnArrow}>→</span>
-                    </a>
-                    <a
-                        href="#product"
-                        className={styles.secondaryBtn}
-                        ref={magneticRef2 as React.Ref<HTMLAnchorElement>}
-                    >
-                        Discover the product
-                    </a>
-                </div>
-
-
-                <div className={`${styles.gaugeWrapper} ${loaded ? styles.gaugeVisible : ""}`}>
-                    <div className={styles.gauge}>
-                        <div className={styles.gaugeRing} />
-                        <div className={styles.gaugeTemp}>
-                            37.2<span className={styles.gaugeDeg}>°C</span>
-                        </div>
-                        <div className={styles.gaugeLabels}>
-                            <span className={`${styles.gaugeLabel} ${styles.gaugeLabelFin}`}>
-                                ↓ 36.5
-                            </span>
-                            <span className={`${styles.gaugeLabel} ${styles.gaugeLabelDebut}`}>
-                                ↑ 38.0
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
 

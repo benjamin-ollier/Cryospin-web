@@ -1,16 +1,67 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import styles from "./Product.module.css";
 import ScrollReveal, { TextReveal } from "./ScrollReveal";
+import { useMagneticHover } from "@/hooks/useAnimations";
 
 const ProductViewer3D = dynamic(() => import("./ProductViewer3D"), { ssr: false });
 
 export default function Product() {
+    const [loaded, setLoaded] = useState(false);
+    const magneticRef1 = useMagneticHover(0.25);
+    const magneticRef2 = useMagneticHover(0.2);
+
+    useEffect(() => {
+        const timer = window.setTimeout(() => setLoaded(true), 100);
+        return () => window.clearTimeout(timer);
+    }, []);
 
     return (
         <section className={styles.descriptionSection} id="product">
             <div className={styles.container}>
+                <div className={styles.heroTransferTop}>
+                    <p className={`${styles.productSubtitle} ${loaded ? styles.productSubtitleVisible : ""}`}>
+                        Cryospin is a connected cooling necklace controlled through an app.
+                        Automatic mode or manual control — the ideal temperature, always.
+                    </p>
+
+                    <div className={`${styles.productHeroCtas} ${loaded ? styles.productCtasVisible : ""}`}>
+                        <a
+                            href="#demo"
+                            className={styles.productPrimaryBtn}
+                            ref={magneticRef1 as React.Ref<HTMLAnchorElement>}
+                        >
+                            <span>Watch the demonstration</span>
+                            <span className={styles.productBtnArrow}>→</span>
+                        </a>
+                        <a
+                            href="#product"
+                            className={styles.productSecondaryBtn}
+                            ref={magneticRef2 as React.Ref<HTMLAnchorElement>}
+                        >
+                            Discover the product
+                        </a>
+                    </div>
+
+                    <div className={`${styles.productGaugeWrapper} ${loaded ? styles.productGaugeVisible : ""}`}>
+                        <div className={styles.productGauge}>
+                            <div className={styles.productGaugeRing} />
+                            <div className={styles.productGaugeTemp}>
+                                37.2<span className={styles.productGaugeDeg}>°C</span>
+                            </div>
+                            <div className={styles.productGaugeLabels}>
+                                <span className={`${styles.productGaugeLabel} ${styles.productGaugeLabelFin}`}>
+                                    ↓ 36.5
+                                </span>
+                                <span className={`${styles.productGaugeLabel} ${styles.productGaugeLabelDebut}`}>
+                                    ↑ 38.0
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className={styles.textGrid}>
                     <div className={styles.labelCol}>
