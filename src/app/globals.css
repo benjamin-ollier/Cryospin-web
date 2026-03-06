@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
 
 /* ── CSS Custom Properties ── */
 :root {
@@ -32,7 +32,7 @@
   --chrome-text-gradient: linear-gradient(135deg, #c0c0d0, #ffffff, #b0b0c0, #e0e0e8);
 
   /* Typography */
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-main: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -74,6 +74,7 @@ html {
 
 body {
   font-family: var(--font-main);
+  font-weight: 300;
   background: var(--bg-dark);
   color: var(--chrome-100);
   line-height: 1.6;
@@ -82,6 +83,25 @@ body {
 
 p {
   color: var(--chrome-200);
+  font-weight: 300;
+}
+
+li,
+span,
+a,
+button,
+input,
+textarea {
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 a {

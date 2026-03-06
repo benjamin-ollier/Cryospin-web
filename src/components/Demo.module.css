@@ -11,7 +11,7 @@
 .sectionLabel {
     display: inline-block;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--accent-blue);
@@ -20,7 +20,7 @@
 
 .sectionTitle {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-weight: 500;
     letter-spacing: -0.02em;
     margin-bottom: var(--space-md);
     text-align: center;
@@ -89,7 +89,7 @@
     border-radius: var(--radius-full);
     background: #ffffff;
     color: #050509;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.05rem;
     letter-spacing: 0.02em;
     transition: all 0.3s ease;
