@@ -31,10 +31,10 @@ export default function ProductPresentationPage() {
           <div className={`glass-card ${styles.heroVisual}`}>
             <div className={styles.viewerWrap}>
               <Image
-                src="/collier_face.png"
-                alt="Cryospin collar front view"
-                width={1400}
-                height={900}
+                src="/jury2.png"
+                alt="Jury visual"
+                width={1200}
+                height={700}
                 className={styles.heroImage}
                 priority
               />
