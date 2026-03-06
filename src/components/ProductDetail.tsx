@@ -1,13 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback, useState } from "react";
 import styles from "./ProductDetail.module.css";
+
+const carouselImages = [
+    { src: "/collar.png", alt: "Cryospin collar front view" },
+    { src: "/collar3.png", alt: "Cryospin collar side view" },
+    { src: "/fegr.png", alt: "Cryospin collar close-up view" },
+];
 
 export default function ProductDetail() {
     const sectionRef = useRef<HTMLElement>(null);
     const textRef = useRef<HTMLDivElement>(null);
     const rightRef = useRef<HTMLDivElement>(null);
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const handleScroll = useCallback(() => {
         const section = sectionRef.current;
@@ -35,17 +42,31 @@ export default function ProductDetail() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
+    useEffect(() => {
+        const intervalId = window.setInterval(() => {
+            setActiveSlide((prev) => (prev + 1) % carouselImages.length);
+        }, 2600);
+
+        return () => window.clearInterval(intervalId);
+    }, []);
+
     return (
         <section className={styles.section} ref={sectionRef}>
             <div className={styles.splitLeft}>
                 <div className={styles.imageContainer}>
-                    <Image
-                        src="/collar.png"
-                        alt="Cryospin Collar"
-                        width={600}
-                        height={600}
-                        className={styles.image}
-                    />
+                    <div className={styles.carousel} aria-label="Cryospin collar carousel">
+                        {carouselImages.map((image, index) => (
+                            <Image
+                                key={image.src}
+                                src={image.src}
+                                alt={image.alt}
+                                width={600}
+                                height={600}
+                                className={`${styles.carouselImage} ${index === activeSlide ? styles.carouselImageActive : ""}`}
+                                priority={index === 0}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 
