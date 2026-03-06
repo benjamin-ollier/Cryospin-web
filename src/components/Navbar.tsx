@@ -21,19 +21,19 @@ export default function Navbar() {
                 </Link>
                 <ul className={styles.navLinks}>
                     <li>
-                        <a href="#features" className={styles.navLink}>
+                        <Link href="/#features" className={styles.navLink}>
                             Features
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#demo" className={styles.navLink}>
+                        <Link href="/#demo" className={styles.navLink}>
                             Demonstration
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/presentation" className={styles.navLink}>
+                        <Link href="/presentation" className={styles.navLink}>
                             Story
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="https://palmyre-flanelle-shop.myshopify.com/" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
@@ -41,14 +41,14 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" className={styles.navLink}>
+                        <Link href="/#contact" className={styles.navLink}>
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
-                <a href="#contact" className={styles.ctaButton}>
+                <Link href="/#contact" className={styles.ctaButton}>
                     Pre-order
-                </a>
+                </Link>
             </div>
         </nav>
     );
