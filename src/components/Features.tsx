@@ -92,6 +92,16 @@ export default function Features() {
                         title: "Custom Profiles",
                         desc: "Save your favorite settings and load them in one click for every situation."
                     },
+                    {
+                        icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.88.33 1.74.63 2.56a2 2 0 0 1-.45 2.11L8 9.68a16 16 0 0 0 6.32 6.32l1.29-1.24a2 2 0 0 1 2.11-.45c.82.3 1.68.51 2.56.63A2 2 0 0 1 22 16.92z"></path><circle cx="18" cy="6" r="2"></circle></svg>,
+                        title: "Emergency Call",
+                        desc: "Set an emergency contact name and phone number. One tap triggers an emergency call and shares live location."
+                    },
+                    {
+                        icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="10.5" r="2.5"></circle><circle cx="8.5" cy="7.5" r="2.5"></circle><circle cx="6.5" cy="13.5" r="2.5"></circle><circle cx="12.5" cy="14.5" r="2.5"></circle><path d="M7 21a7 7 0 0 0 10 0"></path></svg>,
+                        title: "Accessibility Settings",
+                        desc: "Choose predefined profiles (color blindness, high contrast) and customize app color themes."
+                    },
                 ].map((item, i) => (
                     <ScrollReveal key={i} variant="scale" delay={300 + i * 150} duration={900}>
                         <div className={`glass-card ${styles.secondaryCard}`}>
