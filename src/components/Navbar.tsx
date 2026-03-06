@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
@@ -15,7 +16,9 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
             <div className={styles.navContent}>
-                <span className={styles.logo}>Cryospin</span>
+                <Link href="/" className={styles.logo} aria-label="Go to homepage">
+                    Cryospin
+                </Link>
                 <ul className={styles.navLinks}>
                     <li>
                         <a href="#features" className={styles.navLink}>
@@ -25,6 +28,11 @@ export default function Navbar() {
                     <li>
                         <a href="#demo" className={styles.navLink}>
                             Demonstration
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/presentation" className={styles.navLink}>
+                            Story
                         </a>
                     </li>
                     <li>
