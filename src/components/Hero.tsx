@@ -55,9 +55,6 @@ export default function Hero() {
             </div>
 
 
-            <div className={`${styles.scrollIndicator} ${loaded ? styles.scrollVisible : ""}`}>
-                <div className={styles.scrollLine} />
-            </div>
         </section>
     );
 }
