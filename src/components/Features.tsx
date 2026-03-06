@@ -38,10 +38,10 @@ export default function Features() {
                         </p>
                         <ul className={styles.paramList}>
                             <li className={styles.param}>
-                                Start temperature — activation threshold
+                                Start / End Temperature 
                             </li>
                             <li className={styles.param}>
-                                End temperature — stop threshold
+                                Start / Stop threshold
                             </li>
                             <li className={styles.param}>
                                 Adjustable fan power
