@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useRef, useEffect, useCallback } from "react";
 import styles from "./ProductDetail.module.css";
-import TextScrollReveal from "./TextScrollReveal";
 
 export default function ProductDetail() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -52,14 +51,17 @@ export default function ProductDetail() {
 
             <div className={styles.splitRight} ref={rightRef}>
                 <div ref={textRef} className={styles.textContent}>
-                    <TextScrollReveal
-                        text="Cryospin's design follows a philosophy of total minimalism — every curve and every material was selected to sit seamlessly on the neck while ensuring maximum thermal diffusion. The color palette is derived directly from the product's identity: tone-on-tone to maintain a calm, clean, and refined expression."
-                        className={styles.body}
-                    />
-                    <TextScrollReveal
-                        text="The Cryospin necklace is not a gadget — it is a comfort tool designed for people who refuse to endure the heat. Simple. Precise. Discreet."
-                        className={styles.bodySecond}
-                    />
+                    <p className={styles.body}>
+                        Cryospin&apos;s design follows a philosophy of total minimalism — every
+                        curve and every material was selected to sit seamlessly on the neck while
+                        ensuring maximum thermal diffusion. The color palette is derived directly
+                        from the product&apos;s identity: tone-on-tone to maintain a calm, clean,
+                        and refined expression.
+                    </p>
+                    <p className={styles.bodySecond}>
+                        The Cryospin necklace is not a gadget — it is a comfort tool designed for
+                        people who refuse to endure the heat. Simple. Precise. Discreet.
+                    </p>
                 </div>
 
                 <div className={styles.specFooter}>
