@@ -28,24 +28,17 @@ export default function ProductPresentationPage() {
       <Navbar />
       <main className={styles.page}>
         <section className={styles.hero}>
-          <div className={styles.logoWrap}>
-            <Image
-              src="/palmyre_flanelle.png"
-              alt="Palmyre Flanelle"
-              width={1502}
-              height={750}
-              className={styles.logo}
-              priority
-            />
-          </div>
           <div className={`glass-card ${styles.heroVisual}`}>
-            <Image
-              src="/collar.png"
-              alt="Cryospin collar"
-              width={900}
-              height={900}
-              className={styles.heroImage}
-            />
+            <div className={styles.viewerWrap}>
+              <Image
+                src="/collier_face.png"
+                alt="Cryospin collar front view"
+                width={1400}
+                height={900}
+                className={styles.heroImage}
+                priority
+              />
+            </div>
           </div>
         </section>
 

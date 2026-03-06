@@ -6,7 +6,6 @@ import styles from "./ProductDetail.module.css";
 
 const carouselImages = [
     { src: "/collar.png", alt: "Cryospin collar front view" },
-    { src: "/collar3.png", alt: "Cryospin collar side view" },
     { src: "/fegr.png", alt: "Cryospin collar close-up view" },
 ];
 
