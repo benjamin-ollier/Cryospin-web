@@ -4,17 +4,26 @@ import Image from "next/image";
 import { useRef, useEffect, useCallback, useState } from "react";
 import styles from "./ProductDetail.module.css";
 
-const carouselImages = [
-    { src: "/collar.png", alt: "Cryospin collar front view" },
-    { src: "/mannequin_profil.png", alt: "Cryospin mannequin profile view" },
-    { src: "/fegr.png", alt: "Cryospin collar close-up view" },
+type CarouselItem =
+    | { type: "image"; src: string; alt: string }
+    | { type: "video"; src: string; ariaLabel: string };
+
+const carouselItems: CarouselItem[] = [
+    { type: "image", src: "/collar.png", alt: "Cryospin collar front view" },
+    { type: "image", src: "/mannequin_profil.png", alt: "Cryospin mannequin profile view" },
+    { type: "image", src: "/fegr.png", alt: "Cryospin collar close-up view" },
+    { type: "video", src: "/video.mp4", ariaLabel: "Cryospin product video" },
 ];
 
 export default function ProductDetail() {
+    const IMAGE_SLIDE_DURATION_MS = 2600;
+    const VIDEO_SLIDE_FALLBACK_DURATION_MS = 4000;
+
     const sectionRef = useRef<HTMLElement>(null);
     const textRef = useRef<HTMLDivElement>(null);
     const rightRef = useRef<HTMLDivElement>(null);
     const [activeSlide, setActiveSlide] = useState(0);
+    const [videoSlideDurationMs, setVideoSlideDurationMs] = useState(VIDEO_SLIDE_FALLBACK_DURATION_MS);
 
     const handleScroll = useCallback(() => {
         const section = sectionRef.current;
@@ -43,29 +52,58 @@ export default function ProductDetail() {
     }, [handleScroll]);
 
     useEffect(() => {
-        const intervalId = window.setInterval(() => {
-            setActiveSlide((prev) => (prev + 1) % carouselImages.length);
-        }, 2600);
+        const activeItem = carouselItems[activeSlide];
+        const slideDurationMs =
+            activeItem.type === "video" ? videoSlideDurationMs : IMAGE_SLIDE_DURATION_MS;
 
-        return () => window.clearInterval(intervalId);
-    }, []);
+        const timeoutId = window.setTimeout(() => {
+            setActiveSlide((prev) => (prev + 1) % carouselItems.length);
+        }, slideDurationMs);
+
+        return () => window.clearTimeout(timeoutId);
+    }, [activeSlide, videoSlideDurationMs]);
 
     return (
         <section className={styles.section} ref={sectionRef}>
             <div className={styles.splitLeft}>
                 <div className={styles.imageContainer}>
                     <div className={styles.carousel} aria-label="Cryospin collar carousel">
-                        {carouselImages.map((image, index) => (
-                            <Image
-                                key={image.src}
-                                src={image.src}
-                                alt={image.alt}
-                                width={600}
-                                height={600}
-                                className={`${styles.carouselImage} ${index === activeSlide ? styles.carouselImageActive : ""}`}
-                                priority={index === 0}
-                            />
-                        ))}
+                        {carouselItems.map((item, index) =>
+                            item.type === "image" ? (
+                                <Image
+                                    key={item.src}
+                                    src={item.src}
+                                    alt={item.alt}
+                                    width={600}
+                                    height={600}
+                                    className={`${styles.carouselImage} ${index === activeSlide ? styles.carouselImageActive : ""}`}
+                                    priority={index === 0}
+                                />
+                            ) : (
+                                <video
+                                    key={item.src}
+                                    src={item.src}
+                                    className={`${styles.carouselVideo} ${index === activeSlide ? styles.carouselImageActive : ""}`}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    preload="metadata"
+                                    aria-label={item.ariaLabel}
+                                    onLoadedMetadata={(event) => {
+                                        const duration = event.currentTarget.duration;
+                                        if (!Number.isFinite(duration) || duration <= 0) return;
+                                        // Keep one full playback + a small buffer for transition.
+                                        setVideoSlideDurationMs(
+                                            Math.max(
+                                                IMAGE_SLIDE_DURATION_MS,
+                                                Math.ceil(duration * 1000) + 400,
+                                            ),
+                                        );
+                                    }}
+                                />
+                            ),
+                        )}
                     </div>
                 </div>
             </div>

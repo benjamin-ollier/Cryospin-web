@@ -29,7 +29,8 @@
     aspect-ratio: 1 / 1;
 }
 
-.carouselImage {
+.carouselImage,
+.carouselVideo {
     position: absolute;
     inset: 0;
     width: 100%;
