@@ -28,7 +28,7 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://seasonly.fr/collections/shop" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+                        <a href="https://palmyre-flanelle-shop.myshopify.com/" target="_blank" rel="noopener noreferrer" className={styles.navLink}>
                             Shop
                         </a>
                     </li>
